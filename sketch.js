@@ -12,6 +12,7 @@ function setup() {
   createCanvas(800, 800);
   createP('Press p to pause');
   createP('Use Arrow to move')
+  createP('Press space to move faster')
   frameRate(60);
   W = width / GRIDWIDTH;
   H = height / GRIDWIDTH;
@@ -153,7 +154,7 @@ class Snake {
     if (fruit.x == this.pos.x && fruit.y == this.pos.y) {
       fruit = createFruit();
       this.tailSize++;
-      score += 2500;
+      score += 100;
     }
   }
 
